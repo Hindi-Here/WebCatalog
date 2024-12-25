@@ -1,2 +1,2 @@
-# WebCatalog
- examples of web works using different technologies and methods
+# Сборник web-проектов
+ Небольшой репозиторий с разными проектами на разную тематику
