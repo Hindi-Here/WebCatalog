@@ -1,0 +1,32 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title> Стандартная структура </title>
+    <link rel="stylesheet" href="site.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+            crossorigin="anonymous"></script>
+    <script src="site.js"></script>
+</head>
+<body>
+    
+    <div class="figureCalculateBlock">
+        <p class="figureCalculateTitle"> Площадь трапеции online </p>
+        <img class="figureCalculateImage" src="recource/трапеция.png"/>
+
+        <select id="calcMethod" onchange="generateTrapezoidFields()">
+            <option value="standard"> Стандартный метод (a, b, h) </option>
+            <option value="diagonals"> Метод через диагонали (d1, d2, h) </option>
+            <option value="middleLine"> Метод средней линии и высоты (a, h) </option>
+        </select>
+
+        <input class="field1" placeholder="сторона a:"/>
+        <input class="field2" placeholder="сторона b:"/>
+        <input class="field3" placeholder="высота h:"/>
+
+        <button class="figureCalculateButton" onclick="calculateTrapezoidArea()"> Подсчитать </button>
+        <span id="answer"></span>
+    </div>
+
+</body>
+</html>
+

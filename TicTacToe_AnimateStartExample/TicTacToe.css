@@ -1,0 +1,195 @@
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.TicTacToe-container{
+    display: inline-grid;
+    grid-template-columns: 100pt 100pt 100pt;
+    grid-template-rows: 100pt 100pt 100pt;
+    gap: 10pt;
+    padding: 10pt;
+    margin: 20pt;
+    border: 1pt dashed rgba(0, 0, 0, 0.7);
+    animation: border-animation 2s linear infinite;
+}
+
+@keyframes border-animation {
+    0% {
+        border-top-color: rgba(0, 0, 0, 0.7);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    25% {
+        border-top-color: transparent;
+        border-right-color: rgba(0, 0, 0, 0.7);
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    50% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: rgba(0, 0, 0, 0.7);
+        border-left-color: transparent;
+    }
+    75% {
+        border-top-color: transparent;
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: rgba(0, 0, 0, 0.7);
+    }
+    100% {
+        border-top-color: rgba(0, 0, 0, 0.7);
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+}
+
+.TicTacToe-cell{
+    background-color: rgb(245, 245, 245);
+    color: transparent;
+    border: 1pt solid black;
+    opacity: 0;
+    font-size: 50pt;
+    font-weight: bolder;
+    text-align: center;
+    line-height: 100pt;
+    transition: background-color 0.3s ease-out, color 0.5s ease;
+}
+.TicTacToe-cell:hover{
+    background-color: rgb(235,235,235);
+}
+.TicTacToe-cell:active {
+    background-color: #ffffff;
+}
+
+.TicTacToe-cell.X {
+    background-color: #cdf2ff;
+    color: rgb(112, 112, 255);
+}
+
+.TicTacToe-cell.O {
+    background-color: #ffcfd7;
+    color: rgb(255, 112, 112);
+}
+
+#game-result {
+    font-size: 18pt;
+    margin-top: 20pt;
+}
+
+#game-reset {
+    margin-top: 10pt;
+    padding: 10pt 20pt; 
+    font-size: 16pt; 
+    font-weight: bold; 
+    border: 1pt solid rgba(0, 0, 0, 0.7);
+    border-radius: 5pt; 
+    background-color: rgb(245, 245, 245);
+    cursor: pointer; 
+    transition: background-color 0.3s ease-out; 
+}
+#game-reset:hover {
+    background-color: rgb(235,235,235);
+}
+
+#cell1 {
+    animation-name: animation-top-cell;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+}
+
+#cell2 {
+    animation: animation-top-cell 1s 0.3s forwards;
+}
+
+#cell3 {
+    animation: animation-top-cell 1s 0.6s forwards;
+}
+
+#cell4 {
+    animation: animation-left-cell 1s 0.9s forwards;
+}
+
+#cell5 {
+    animation: animation-middle-cell 1s 2.4s forwards;
+}
+
+#cell6 {
+    animation: animation-right-cell 1s 1.2s forwards;
+}
+
+#cell7 {
+    animation: animation-bottom-cell 1s 1.5s forwards;
+}
+
+#cell8 {
+    animation: animation-bottom-cell 1s 1.8s forwards;
+}
+
+#cell9 {
+    animation: animation-bottom-cell 1s 2.1s forwards;
+}
+
+
+@keyframes animation-top-cell {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-left-cell {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-bottom-cell {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-right-cell {
+    0% {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes animation-middle-cell {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}

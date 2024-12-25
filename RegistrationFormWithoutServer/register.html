@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация на онлайн конференцию</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Регистрация на онлайн конференцию</h1>
+          <form>
+            <div class="form-group">
+                <label id="one"> ФИО: </label>
+                <input pattern="[a-zA-Zа-яА-Я ]{8,100}" required>
+            </div>
+
+            <div class="form-group">
+                <label> Электронная почта: </label>
+                <input type="email" required>
+            </div>
+
+            <div class="form-group">
+                <label> Телефон: </label>
+                <input placeholder="x (xxx) xxx-xx-xx" pattern="\d{1}\s[\(]\d{3}[\)]\s\d{3}[\-]\d{2}[\-]\d{2}" required>
+            </div>
+
+            <div class="form-group">
+                <label> Компания: </label>
+                <input>
+            </div>
+
+            <div class="form-group">
+                <label> Должность: </label>
+                <input>
+            </div>
+
+            <div class="form-group">
+                <label> Пароль: </label>
+                <input placeholder="Не менее 8 символов, включая 1: большой и малый символ, специальный символ, цифру"
+                    pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" type="password" required>
+            </div>
+
+            <div class="form-group">
+                <label> Подтверждение пароля: </label>
+                <input type="password" required>
+            </div>
+
+            <button> Зарегистрироваться </button>
+        </form>  
+    </div>
+</body>
+</html>

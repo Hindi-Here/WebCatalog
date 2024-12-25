@@ -1,0 +1,42 @@
+.figureCalculateBlock {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    border: 1px solid #bdbdbd;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.figureCalculateTitle {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0 0 20px 0;
+}
+.figureCalculateImage{
+    margin-bottom: 10px;
+}
+input, #calcMethod {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.figureCalculateButton {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+.figureCalculateButton:hover {
+    background-color: #3e8e41;
+}
+#answer {
+    font-weight: bold;
+    color: #00698f;
+    margin-top: 10px;
+}
